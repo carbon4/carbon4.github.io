@@ -1,0 +1,14 @@
+Top Navigation : Home, Blog, Repository, About, Github
+Side Navigation
+Page Comment and Like with Disqus
+Map :
+    index.html
+    blog.html
+    posts/
+    repository.html
+    about.html
+layout :
+    default
+    post
+    project
+Repository Searching : https://help.github.com/en/github/searching-for-information-on-github/searching-for-repositories

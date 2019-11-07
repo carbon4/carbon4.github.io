@@ -1,0 +1,15 @@
+---
+layout: blog
+---
+<div class="row m-0">
+	<div class="col-12 col-md-8">
+		<div class="mt-3">
+			{% assign page_path = path.path | join: '~~~' | downcase | split: '~~~' %}
+			{% if page_path contains ".md" or page_path contains ".markdown" %} 
+				{{ content | markdownify}}
+			{% else %}
+				{{ content }}
+			{% endif %}
+		</div>
+	</div>
+</div>

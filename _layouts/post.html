@@ -1,0 +1,23 @@
+---
+layout: blog_side
+---
+
+<div class="card mb-3">
+	<div class="card-body">
+		<h3 class="card-title mb-0"><a class="text-dark" href="{{ page.url }}">{{ page.title }}</a></h3>
+		<p class="mb-4">
+			<small class="text-muted">by {{ page.author }}</small>
+			<small class="text-muted float-right">{{ page.date | date: "%A, %d %b %Y %H:%M:%S"}}</small>
+		</p>
+		<div>
+			<p>
+				{% assign page_path = path.path | join: '~~~' | downcase | split: '~~~' %}
+				{% if page_path contains ".md" or page_path contains ".markdown" %} 
+					{{ content | markdownify}}
+				{% else %}
+					{{ content }}
+				{% endif %}
+			</p>
+		</div>
+	</div>
+</div>
