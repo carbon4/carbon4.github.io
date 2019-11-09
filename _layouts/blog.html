@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<title>{% if page.title %}{{page.title}} - {% endif %}Carbon</title>
+		<title>{% if page.title %}{{page.title}} - {% endif %}{{ site.title }}</title>
 
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -41,7 +41,7 @@
 					<span style="font-size:10em;">C</span>
 				</div>
 				<div class="ml-3 text-left d-inline-block" style="width:calc(100% - 2em); max-width: 30em;">
-					<span style="font-size:2em;">Carbon</span> <br />
+					<span style="font-size:2em;">{{ site.title }}</span> <br />
 					<span><span class="d-inline-block" style="width:2em;"></span></span>{{ site.description }}</span>
 				</div>
 			</div>
