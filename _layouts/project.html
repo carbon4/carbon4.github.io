@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<title>{% if page.title %}{{page.title}} - {% endif %}{{ site.title }}</title>
+		<title>{% if page.title %}{{page.project_title}} {{ page.title }} - {% endif %}{{ site.title }}</title>
 
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -35,11 +35,11 @@
 			<div id="topnav">
 				{% include topnav2.html %}
 			</div>
-			<div class="p-2">
-				<div class="text-center d-inline-block"><div class="rounded-circle" style="width:10em;height:10em;background: rgba(255,255,255,0.9);"></div></div>
-				<div class="mt-n2 ml-3 text-left d-inline-block position-relative" style="width:calc(100% - 2em); max-width: 30em; top:-1em;">
-					<span style="font-size:2em;">{{ page.title }}</span> <br />
-					<span><span class="d-inline-block" style="width:2em;"></span></span>{{ page.description }}</span>
+			<div class="p-2 row">
+				<div class="text-center col-12 col-sm-3 text-center"><div class="rounded-circle d-inline-block overflow-hidden" style="width:10em;height:10em;background: rgba(255,255,255,0.9);"><img class="mt-4" style="height:calc(100% - 2em);" src="{{ page.favicon }}" /></div></div>
+				<div class="mt-n2 ml-3 text-left col-12 col-sm-5" style="width:calc(100% - 2em); max-width: 30em;">
+					<span style="font-size:2em;">{{ page.project_title }}</span> <br />
+					<span class="google-scrollbar d-inline-block" style="overflow-y:auto; height:8em;"><span class="d-inline-block" style="width:2em;"></span>{{ page.project_description }}</span>
 				</div>
 			</div>
 			<div style="padding-bottom: 11em;"></div>
@@ -63,7 +63,7 @@
 							<div class="card-body">
 								<h3 class="card-title mb-0"><a class="text-dark" href="{{ page.url }}">{{ page.title }}</a></h3>
 								<p class="mb-4">
-									<small class="text-muted">carbon4 > {{ page.title }} > Overview</small>
+									<small><a class="text-muted" href="/">Carbon</a> > <a class="text-muted" href="{{ page.project_link.root }}">{{ page.project_title }}</a> > Overview</small>
 								</p>
 								<div>
 									<p>
@@ -85,9 +85,9 @@
 		<script>
 			window.onresize = function(event){
 				if($("body").outerHeight() < window.outerHeight){
-					$("#footer").addClass("position-fixed").css({"bottom":"0px", "width":"100%"});
+					$("#footer").addClass("position-absolute").css({"bottom":"0px", "width":"100%"});
 				}else{
-					$("#footer").removeClass("position-fixed").css({"bottom":"auto", "width":"auto"});
+					$("#footer").removeClass("position-absolute").css({"bottom":"auto", "width":"auto"});
 				}
 			}
 			window.onresize();
