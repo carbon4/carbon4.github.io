@@ -43,7 +43,8 @@
 			{% endif %}
 		</div>
 		<div id="footer" class="text-center p-2" style="opacity:0.8;"><span class="px-1">{% octicon pencil %}</span> with <span class="px-1">{% octicon heart %}</span> by <a href="https://github.com/farhanms123" class="btn-link"><b style="letter-spacing: 0.05em;">FarhanMS123</b></a></div>
-        
+		
+		{% include plugin.html %}
         <script>
 			window.onresize = function(event){
 				if($("body").outerHeight() < window.outerHeight){

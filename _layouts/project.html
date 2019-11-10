@@ -82,6 +82,8 @@
 			</div>
 		</div>
 		<div id="footer" class="text-center p-2" style="background: {{ page.theme_color }}; color: {{ page.theme_text_color }}"><span class="px-1">{% octicon pencil %}</span> with <span class="px-1">{% octicon heart %}</span> by <a href="https://github.com/farhanms123" class="btn-link text-white"><b style="letter-spacing: 0.05em;">FarhanMS123</b></a></div>
+		
+		{% include plugin.html %}
 		<script>
 			window.onresize = function(event){
 				if($("body").outerHeight() < window.outerHeight){
